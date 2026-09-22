@@ -117,12 +117,31 @@
       color: #bbb;
       margin: 14px 0 0;
     }
-    video, .stills img {
+    .clip {
+      position: relative;
+      margin-top: 40px;
+    }
+    video {
       display: block;
       width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      background: #111;
       border: 3px solid #fff;
     }
-    video { margin-top: 40px; aspect-ratio: 9 / 16; object-fit: cover; background: #111; }
+    .sound {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: var(--pop);
+      color: var(--ink);
+      border: 0;
+      font-family: var(--display);
+      font-size: 22px;
+      padding: 8px 14px 5px;
+      box-shadow: 5px 5px 0 var(--alarm);
+      cursor: pointer;
+    }
     h2 {
       font-family: var(--display);
       font-weight: 400;
@@ -154,12 +173,6 @@
       white-space: nowrap;
     }
     .spec li.epa span:last-child { color: #4fd1a5; }
-    .stills {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 36px;
-    }
     .fine {
       margin-top: 34px;
       font-style: italic;
@@ -176,7 +189,7 @@
     <p class="role">IMPROVISER <span>(AT PIANO)</span></p>
     <p class="pitch">
       I'd like to come and play live piano with your improv team. Rehearsals, shows, practice. I've been doing improv
-      for something like 20 years. Don't tell anybody.
+      for something like 20 years.
     </p>
     <div class="free">FREE · NO FEE · I JUST WANT TO PLAY</div>
 
@@ -187,7 +200,10 @@
     <button class="copy" type="button" data-email="collintmiller@gmail.com">Copy email</button>
     <p class="dm">or DM me</p>
 
-    <video src="media/major-chords.mp4" poster="media/major-chords.jpg" autoplay muted loop playsinline></video>
+    <div class="clip">
+      <video src="media/major-chords.mp4" poster="media/major-chords.jpg" autoplay muted loop playsinline></video>
+      <button class="sound" type="button">🔊 TAP FOR SOUND</button>
+    </div>
 
     <h2>What you get</h2>
     <ul class="spec">
@@ -205,12 +221,6 @@
       <li><span>Price</span><span>$0.00</span></li>
     </ul>
 
-    <div class="stills">
-      <img src="media/still-1.jpg" alt="Collin with a FOR FREE, NO FEE stamp" loading="lazy" />
-      <img src="media/still-2.jpg" alt="Bare foot on the sustain pedal, labeled FEET INCLUDED" loading="lazy" />
-      <img src="media/still-3.jpg" alt="A triangle, labeled TRIANGLE" loading="lazy" />
-      <img src="media/still-4.jpg" alt="Collin holding refrigerant gauges under an OFFICIALLY ALLOWED seal" loading="lazy" />
-    </div>
 
     <p class="fine">
       *Not relevant to improv. I won't plug it into anything in your house.<br />
@@ -218,6 +228,17 @@
     </p>
   </main>
   <script>
+    const video = document.querySelector("video");
+    const sound = document.querySelector(".sound");
+    const toggleSound = () => {
+      video.muted = !video.muted;
+      if (!video.muted) video.currentTime = 0;
+      video.play();
+      sound.textContent = video.muted ? "🔊 TAP FOR SOUND" : "🔇 MUTE";
+    };
+    sound.addEventListener("click", toggleSound);
+    video.addEventListener("click", toggleSound);
+
     document.querySelector(".copy").addEventListener("click", async (e) => {
       await navigator.clipboard.writeText(e.target.dataset.email);
       e.target.textContent = "Copied ✓";

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collin Miller · Improviser (at piano)</title>
+  <meta name="description" content="Live piano for your improv team. Rehearsals and shows. Free. I just want to play." />
+  <meta property="og:title" content="Need a piano player? Collin Miller, improviser (at piano)" />
+  <meta property="og:description" content="Live piano for your improv team. Rehearsals and shows. Free. I just want to play." />
+  <meta property="og:image" content="https://collin.github.io/media/og.jpg" />
+  <meta property="og:url" content="https://collin.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0b0b0b;
+      --pop: #ffe600;
+      --alarm: #ff2d2d;
+      --certified: #1a936f;
+      --display: "Anton", Impact, sans-serif;
+      --mono: "Space Mono", ui-monospace, monospace;
+      --body: "Inter", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--ink);
+      color: #fff;
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 40px 22px 64px;
+    }
+    .kicker {
+      display: inline-block;
+      font-family: var(--display);
+      font-size: 30px;
+      color: var(--ink);
+      background: var(--pop);
+      padding: 4px 14px 2px;
+      box-shadow: 6px 6px 0 var(--alarm);
+      rotate: -2deg;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 76px;
+      line-height: 0.92;
+      margin: 26px 0 6px;
+      text-transform: uppercase;
+    }
+    .role {
+      font-family: var(--display);
+      font-size: 28px;
+      margin: 0;
+    }
+    .role span { color: var(--pop); }
+    .pitch {
+      font-size: 19px;
+      line-height: 1.45;
+      color: #e8e8e8;
+      margin: 22px 0 0;
+    }
+    .free {
+      display: inline-block;
+      margin-top: 18px;
+      font-family: var(--display);
+      font-size: 32px;
+      background: var(--alarm);
+      padding: 6px 16px 3px;
+      rotate: -1.5deg;
+    }
+    .email {
+      display: block;
+      margin-top: 30px;
+      padding: 20px 18px;
+      background: var(--pop);
+      color: var(--ink);
+      text-decoration: none;
+      text-align: center;
+      font-weight: 800;
+      font-size: clamp(18px, 5.4vw, 26px);
+      box-shadow: 8px 8px 0 var(--alarm);
+      transition: translate 0.1s, box-shadow 0.1s;
+    }
+    .email:active { translate: 4px 4px; box-shadow: 4px 4px 0 var(--alarm); }
+    .email small {
+      display: block;
+      margin-top: 4px;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .copy {
+      display: block;
+      margin: 18px auto 0;
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+    .dm {
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 14px;
+      color: #bbb;
+      margin: 14px 0 0;
+    }
+    video, .stills img {
+      display: block;
+      width: 100%;
+      border: 3px solid #fff;
+    }
+    video { margin-top: 40px; aspect-ratio: 9 / 16; object-fit: cover; background: #111; }
+    h2 {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 44px;
+      margin: 44px 0 14px;
+      text-transform: uppercase;
+    }
+    .spec {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 3px solid var(--pop);
+    }
+    .spec li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 2px;
+      border-bottom: 1px solid #333;
+      font-weight: 700;
+      font-size: 17px;
+    }
+    .spec li span:last-child {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--pop);
+      text-align: right;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .spec li.epa span:last-child { color: #4fd1a5; }
+    .stills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 36px;
+    }
+    .fine {
+      margin-top: 34px;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #9a9a9a;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="kicker">NEED A PIANO PLAYER?</div>
+    <h1>Collin Miller</h1>
+    <p class="role">IMPROVISER <span>(AT PIANO)</span></p>
+    <p class="pitch">
+      I'd like to come and play live piano with your improv team. Rehearsals, shows, practice. I've been doing improv
+      for something like 20 years. Don't tell anybody.
+    </p>
+    <div class="free">FREE · NO FEE · I JUST WANT TO PLAY</div>
+
+    <a class="email" href="mailto:collintmiller@gmail.com?subject=Piano%20for%20our%20improv%20team">
+      collintmiller@gmail.com
+      <small>Tap to email</small>
+    </a>
+    <button class="copy" type="button" data-email="collintmiller@gmail.com">Copy email</button>
+    <p class="dm">or DM me</p>
+
+    <video src="media/major-chords.mp4" poster="media/major-chords.jpg" autoplay muted loop playsinline></video>
+
+    <h2>What you get</h2>
+    <ul class="spec">
+      <li><span>Slow music</span><span>✓</span></li>
+      <li><span>Fast music</span><span>✓</span></li>
+      <li><span>Major chords</span><span>×2 · several</span></li>
+      <li><span>Minor chords</span><span>(sad)</span></li>
+      <li><span>Keyboard</span><span>portable · plugs in</span></li>
+      <li><span>Glissando</span><span>✓</span></li>
+      <li><span>Hands</span><span>×2</span></li>
+      <li><span>Sustain pedal</span><span>feet included</span></li>
+      <li><span>Triangle</span><span>supervised</span></li>
+      <li><span>Amplifier</span><span>does pianos too</span></li>
+      <li class="epa"><span>EPA 608 certification*</span><span>officially allowed</span></li>
+      <li><span>Price</span><span>$0.00</span></li>
+    </ul>
+
+    <div class="stills">
+      <img src="media/still-1.jpg" alt="Collin with a FOR FREE, NO FEE stamp" loading="lazy" />
+      <img src="media/still-2.jpg" alt="Bare foot on the sustain pedal, labeled FEET INCLUDED" loading="lazy" />
+      <img src="media/still-3.jpg" alt="A triangle, labeled TRIANGLE" loading="lazy" />
+      <img src="media/still-4.jpg" alt="Collin holding refrigerant gauges under an OFFICIALLY ALLOWED seal" loading="lazy" />
+    </div>
+
+    <p class="fine">
+      *Not relevant to improv. I won't plug it into anything in your house.<br />
+      Trial period available (also free).
+    </p>
+  </main>
+  <script>
+    document.querySelector(".copy").addEventListener("click", async (e) => {
+      await navigator.clipboard.writeText(e.target.dataset.email);
+      e.target.textContent = "Copied ✓";
+    });
+  </script>
+</body>
+</html>
